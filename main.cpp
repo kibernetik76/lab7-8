@@ -115,7 +115,7 @@ public:
         cout << "Motor type: " << Motor_type<<endl;
         cout << "Original price: " << original_price<<endl;
     }
-    void Writing_to_file(const string& filename){               //возможно const!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    void Writing_to_file(const string& filename){               //запись в файл
         ofstream file(filename);
 
         if (file.is_open()){
@@ -133,7 +133,7 @@ public:
             cout << "Writing to the file has NOT been completed" << endl;
     }
 
-    void Reading_from_file(const string& filename){               //возможно const!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    void Reading_from_file(const string& filename){               //получение значений из файла
         ifstream file(filename);
 
         if (file.is_open()){
@@ -150,7 +150,7 @@ public:
 
 
 protected:
-    virtual void Register_car(){
+    virtual void Register_car(){ //Виртуальные функция
         int price = 1;
         cout << "Cost of registration: "<< price << endl;
         cout << "Registration was successful"<<endl;
@@ -364,7 +364,6 @@ public:
 
 class Customer{
 private:
-
     int Driving_Experiense;
     string phone_number;
 public:
@@ -453,7 +452,7 @@ public:
     }
 
 
-    void Writing_to_file(const string& filename){               //возможно const!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    void Writing_to_file(const string& filename){
         ofstream file(filename);
 
         if (file.is_open()){
@@ -468,7 +467,7 @@ public:
             cout << "Writing to the file has NOT been completed" << endl;
     }
 
-    void Reading_from_file(const string& filename){               //возможно const!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    void Reading_from_file(const string& filename){
         ifstream file(filename);
 
         if (file.is_open()){
@@ -874,11 +873,6 @@ int main(){
             repair1.getAll();
         }
     }
-
-
-
-
-
 
 
 
